@@ -1,0 +1,210 @@
+/* Основные цвета */
+:root {
+    --primary-green: #2ecc71;
+    --dark-green: #27ae60;
+    --light-green: #d5f5e3;
+    --accent-green: #1abc9c;
+    --background: #f7fcf9;
+    --white: #ffffff;
+    --gray: #f1f5f9;
+    --dark-gray: #64748b;
+    --text-dark: #1e293b;
+    --text-light: #64748b;
+}
+
+/* Общие стили */
+.statistics-container {
+    background-color: var(--background);
+    min-height: 100vh;
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Карточки */
+.stat-card {
+    background-color: var(--white);
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(46, 204, 113, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(46, 204, 113, 0.15);
+}
+
+.card-header {
+    background-color: var(--primary-green);
+    color: var(--white);
+    padding: 1.2rem 1.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* Кнопки и переключатели */
+.btn {
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.7rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary-green);
+    color: var(--white);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-green);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--primary-green);
+    color: var(--primary-green);
+}
+
+.btn-outline:hover {
+    background-color: var(--light-green);
+}
+
+.time-range-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    background-color: var(--gray);
+    color: var(--text-light);
+    border: none;
+}
+
+.time-range-btn.active {
+    background-color: var(--primary-green);
+    color: var(--white);
+}
+
+/* Навигационные вкладки */
+.tabs {
+    display: flex;
+    background-color: var(--white);
+    border-radius: 0.8rem;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.tab.active {
+    color: var(--primary-green);
+    border-bottom: 3px solid var(--primary-green);
+    font-weight: 600;
+}
+
+.tab:hover:not(.active) {
+    background-color: var(--light-green);
+}
+
+/* Показатели */
+.metric {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem;
+    background-color: var(--light-green);
+    border-radius: 0.7rem;
+    margin-bottom: 0.8rem;
+}
+
+.metric-label {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.metric-value {
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Графики */
+.chart-container {
+    height: 300px;
+    margin-top: 1rem;
+}
+
+/* Рекомендации */
+.recommendation-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--light-green);
+    border-radius: 0.7rem;
+    margin-bottom: 1rem;
+}
+
+.recommendation-icon {
+    background-color: var(--primary-green);
+    color: var(--white);
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.recommendation-text {
+    color: var(--text-dark);
+}
+
+/* Адаптивная сетка */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.mb4 {
+    border-radius: 8px 8px 0 0;
+    width: 40px; /* Занимает всю ширину карточки */
+    height: 40px; /* Фиксированная высота */
+}

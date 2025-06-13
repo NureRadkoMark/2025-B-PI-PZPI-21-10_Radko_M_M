@@ -1,0 +1,183 @@
+.register-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--background);
+    padding: 2rem;
+}
+
+.register-card {
+    background-color: var(--white);
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(46, 204, 113, 0.1);
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 500px;
+}
+
+.register-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.register-header h2 {
+    color: var(--dark-green);
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--dark-green);
+}
+
+.input-label {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.register-input {
+    width: 100%;
+    padding: 0.8rem 1rem 0.8rem 2.5rem;
+    border: 1px solid var(--light-green);
+    border-radius: 0.6rem;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.toggle-password-btn {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--dark-gray);
+    cursor: pointer;
+    padding: 0.2rem;
+    transition: color 0.2s;
+}
+
+.toggle-password-btn:hover {
+    color: var(--dark-green);
+}
+
+.register-input {
+    padding-right: 2.5rem; /* Добавляем место для кнопки */
+    width: 100%;
+}
+
+.register-input:focus {
+    outline: none;
+    border-color: var(--primary-green);
+}
+
+.register-input::placeholder {
+    color: var(--text-light);
+}
+
+select.register-input {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.7rem center;
+    background-size: 1rem;
+}
+
+.register-button {
+    padding: 0.8rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.register-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+    color: var(--text-light);
+}
+
+.login-link {
+    color: var(--primary-green);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.login-link:hover {
+    color: var(--dark-green);
+    text-decoration: underline;
+}
+
+.register-alert {
+    padding: 0.8rem 1rem;
+    border-radius: 0.6rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.register-alert.error {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+.register-alert.success {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: var(--white);
+    animation: spin 1s ease-in-out infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+@media (max-width: 576px) {
+    .register-card {
+        padding: 1.5rem;
+    }
+
+    .register-page-container {
+        padding: 1rem;
+    }
+}

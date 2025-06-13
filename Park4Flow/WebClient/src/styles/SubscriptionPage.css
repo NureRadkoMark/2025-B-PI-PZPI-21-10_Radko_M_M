@@ -1,0 +1,185 @@
+/* Основные стили */
+.subscription-container {
+    padding: 2rem;
+    min-height: 100vh;
+    background-color: var(--background);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.subscription-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Карточки */
+.subscription-card {
+    background-color: var(--white);
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(46, 204, 113, 0.1);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.subscription-card:hover {
+    box-shadow: 0 6px 16px rgba(46, 204, 113, 0.15);
+}
+
+/* Заголовки */
+.subscription-title {
+    color: var(--dark-green);
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Информация о подписке */
+.subscription-info {
+    background-color: var(--light-green);
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.subscription-detail {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+}
+
+.subscription-label {
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.subscription-value {
+    color: var(--dark-green);
+    font-weight: 600;
+}
+
+/* Тарифные планы */
+.tariffs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.tariff-card {
+    background-color: var(--white);
+    border-radius: 0.8rem;
+    padding: 1.5rem;
+    border: 1px solid var(--light-green);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.tariff-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(46, 204, 113, 0.15);
+}
+
+.tariff-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--dark-green);
+    margin-bottom: 0.5rem;
+}
+
+.tariff-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+}
+
+.tariff-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    margin: 1rem 0;
+    text-align: center;
+}
+
+/* Кнопка регистрации парковки */
+.register-btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.register-btn {
+    padding: 1rem 2rem;
+    border-radius: 0.7rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    border: none;
+    background-color: var(--primary-green);
+    color: var(--white);
+}
+
+.register-btn:hover:not(:disabled) {
+    background-color: var(--dark-green);
+}
+
+.register-btn:disabled {
+    background-color: var(--gray);
+    color: var(--dark-gray);
+    cursor: not-allowed;
+}
+
+/* Сообщения */
+.loading-message, .error-message {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.loading-message {
+    background-color: var(--light-green);
+    color: var(--dark-green);
+}
+
+.error-message {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.4s ease forwards;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .subscription-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .subscription-container {
+        padding: 1rem;
+    }
+
+    .tariffs-grid {
+        grid-template-columns: 1fr;
+    }
+}

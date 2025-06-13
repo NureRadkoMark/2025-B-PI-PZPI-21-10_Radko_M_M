@@ -1,0 +1,196 @@
+/* Общие стили форм */
+.auth-form-container {
+    width: 100%;
+    padding: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.auth-title {
+    color: white;
+    font-size: 1.75rem;
+    margin: 0;
+    text-align: center;
+}
+
+.auth-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    margin: 0.5rem 0 1.5rem;
+}
+
+/* Элементы формы */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.input-with-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-with-icon .input-icon {
+    position: absolute;
+    left: 1rem;
+    color: var(--text-light);
+}
+
+.input-with-icon input,
+.input-with-icon select {
+    width: 100%;
+    padding: 0.8rem 1rem 0.8rem 2.5rem;
+    border: 1px solid var(--light-green);
+    border-radius: 0.6rem;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.input-with-icon input:focus,
+.input-with-icon select:focus {
+    outline: none;
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.2);
+}
+
+.input-with-icon input.error,
+.input-with-icon select.error {
+    border-color: #ff4444;
+}
+
+.error-message {
+    color: #ff4444;
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+}
+
+/* Прокручиваемая область формы */
+.form-scroll-container {
+    max-height: 50vh;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+/* Кнопки */
+.btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.6rem;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-green);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-green);
+}
+
+.btn-primary:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Ссылки */
+.forgot-password {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    text-align: right;
+    cursor: pointer;
+    padding: 0;
+    align-self: flex-end;
+}
+
+.forgot-password:hover {
+    color: var(--primary-green);
+    text-decoration: underline;
+}
+
+.auth-footer {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.auth-link {
+    background: none;
+    border: none;
+    color: var(--primary-green);
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0;
+}
+
+.auth-link:hover {
+    text-decoration: underline;
+}
+
+/* Оповещения */
+.alert {
+    padding: 0.8rem 1rem;
+    border-radius: 0.6rem;
+    font-size: 0.9rem;
+}
+
+.alert-error {
+    background-color: #ffebee;
+    color: #d32f2f;
+    border: 1px solid #ef9a9a;
+}
+
+/* Спиннер */
+.spinner {
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Адаптивность */
+@media (max-width: 480px) {
+    .auth-form-container {
+        padding: 1.5rem;
+    }
+
+    .auth-title {
+        font-size: 1.5rem;
+    }
+
+    .form-scroll-container {
+        max-height: 55vh;
+    }
+}

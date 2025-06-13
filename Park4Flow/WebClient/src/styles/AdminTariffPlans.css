@@ -1,0 +1,110 @@
+/* Основные стили */
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.filter-section {
+    margin-bottom: 1.5rem;
+}
+
+/* Сетка тарифных планов */
+.tariff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.2rem;
+}
+
+.tariff-card {
+    background-color: var(--white);
+    border-radius: 0.8rem;
+    padding: 1.2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--light-green);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tariff-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(46, 204, 113, 0.15);
+}
+
+.tariff-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+.tariff-header h3 {
+    margin: 0;
+    color: var(--text-dark);
+}
+
+.tariff-badge {
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.tariff-badge.uah {
+    background-color: #fff8e1;
+    color: #ff8f00;
+}
+
+.tariff-badge.usd {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+.tariff-badge.eur {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.tariff-details {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.tariff-details p {
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.tariff-price {
+    font-weight: 600;
+    color: var(--dark-green);
+}
+
+.tariff-actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+}
+
+/* Сообщения */
+.no-results {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-light);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .tariff-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}

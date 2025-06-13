@@ -1,0 +1,274 @@
+/* UserReservationsPage.css - Специфичные стили только для страницы бронирований */
+
+/* Основные стили страницы бронирований */
+.user-reservations-page .reservations-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.user-reservations-page .filters-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.user-reservations-page .filter-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.user-reservations-page .reservations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Стили карточки бронирования (специфичные) */
+.user-reservations-page .reservation-card {
+    background-color: var(--white);
+    border-radius: 0.8rem;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-left: 4px solid var(--light-green);
+    cursor: pointer;
+    display: flex;
+}
+
+.user-reservations-page .reservation-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(46, 204, 113, 0.15);
+}
+
+.user-reservations-page .reservation-images {
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+    min-width: 160px;
+}
+
+.user-reservations-page .parking-image-container {
+    height: 120px;
+    overflow: hidden;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.user-reservations-page .parking-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user-reservations-page .vehicle-image-container {
+    height: 80px;
+    overflow: hidden;
+}
+
+.user-reservations-page .vehicle-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user-reservations-page .reservation-content {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-reservations-page .reservation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+}
+
+.user-reservations-page .reservation-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--text-dark);
+}
+
+.user-reservations-page .reservation-status {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.user-reservations-page .reservation-status.active {
+    background-color: var(--light-green);
+    color: var(--dark-green);
+}
+
+.user-reservations-page .reservation-status.cancelled {
+    background-color: #ffeeee;
+    color: #e74c3c;
+}
+
+.user-reservations-page .reservation-details {
+    flex: 1;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.user-reservations-page .detail-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.user-reservations-page .detail-icon {
+    color: var(--text-light);
+    min-width: 16px;
+}
+
+.user-reservations-page .time-range {
+    margin-left: 0.5rem;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.user-reservations-page .price-row {
+    margin-top: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+    border-top: 1px dashed #eee;
+}
+
+.user-reservations-page .price-label {
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.user-reservations-page .price-amount {
+    font-weight: 600;
+    color: var(--dark-green);
+    font-size: 1.05rem;
+}
+
+/* Стили для пагинации */
+.user-reservations-page .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Сообщение об отсутствии бронирований */
+.user-reservations-page .no-reservations {
+    text-align: center;
+    padding: 2rem;
+    grid-column: 1 / -1;
+    color: var(--text-light);
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+/* Стили для кнопки отмены */
+.user-reservations-page .btn-danger {
+    background-color: #ff4444;
+    color: white;
+    border: none;
+}
+
+.user-reservations-page .btn-danger:hover {
+    background-color: #cc0000;
+}
+
+.user-reservations-page .reservation-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.user-reservations-page .error-notice {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: #ff4444;
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .user-reservations-page .filters-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .user-reservations-page .filter-buttons {
+        width: 100%;
+    }
+
+    .user-reservations-page .filter-buttons button {
+        flex-grow: 1;
+    }
+
+    .user-reservations-page .reservation-card {
+        flex-direction: column;
+    }
+
+    .user-reservations-page .reservation-images {
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .user-reservations-page .parking-image-container {
+        height: 120px;
+        width: 60%;
+        border-bottom: none;
+        border-right: 1px solid #f0f0f0;
+    }
+
+    .user-reservations-page .vehicle-image-container {
+        height: 120px;
+        width: 40%;
+    }
+}
+
+@media (max-width: 900px) {
+    .user-reservations-page .pagination {
+        gap: 0.3rem;
+    }
+
+    .user-reservations-page .pagination button {
+        min-width: 36px;
+        padding: 0.3rem 0.5rem;
+    }
+
+    .user-reservations-page .reservation-images {
+        flex-direction: column;
+    }
+
+    .user-reservations-page .parking-image-container {
+        width: 100%;
+        height: 150px;
+        border-right: none;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .user-reservations-page .vehicle-image-container {
+        width: 100%;
+        height: 100px;
+    }
+
+    .user-reservations-page .reservations-grid {
+        grid-template-columns: 1fr;
+    }
+}

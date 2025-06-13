@@ -1,0 +1,29 @@
+.reservation-card {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.parking-image {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.reservation-info {
+    padding: 10px;
+}
+
+.status {
+    font-weight: bold;
+}
+
+.status.active {
+    color: green;
+}
+
+.status.inactive {
+    color: red;
+}
