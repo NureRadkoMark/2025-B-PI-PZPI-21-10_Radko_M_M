@@ -1,0 +1,122 @@
+User
+POST https://192.168.31.250:5192/api/users/register
+POST https://192.168.31.250:5192/api/users/login
+PUT https://192.168.31.250:5192/api/users/ban
+PUT https://192.168.31.250:5192/api/users/unban
+PUT https://192.168.31.250:5192/api/users/update
+GET https://192.168.31.250:5192/api/users/details
+POST https://192.168.31.250:5192/api/users/pass/code
+POST https://192.168.31.250:5192/api/users/pass/reset
+GET https://192.168.31.250:5192/api/users/check
+GET https://192.168.31.250:5192/api/users/email/:email
+DELETE https://192.168.31.250:5192/api/users/delete
+
+
+
+Vehicle
+POST https://192.168.31.250:5192/api/vehicles/create
+PUT https://192.168.31.250:5192/api/vehicles/update/:VehicleID
+DELETE https://192.168.31.250:5192/api/vehicles/delete/:VehicleID
+GET https://192.168.31.250:5192/api/vehicles/user
+
+
+
+TariffPlan
+POST https://192.168.31.250:5192/api/tariffPlans/create
+PUT https://192.168.31.250:5192/api/tariffPlans/update
+DELETE https://192.168.31.250:5192/api/tariffPlans/delete
+GET https://192.168.31.250:5192/api/tariffPlans/currency/:currency
+
+
+
+SubscriptionProcess
+POST https://192.168.31.250:5192/api/subscriptions/paypal/create
+POST https://192.168.31.250:5192/api/subscriptions/paypal/confirm
+POST https://192.168.31.250:5192/api/subscriptions/liqpay/create
+POST https://192.168.31.250:5192/api/subscriptions/liqpay/confirm
+
+
+
+SalesPolicies
+POST https://192.168.31.250:5192/api/salesPolicies/create
+DELETE https://192.168.31.250:5192/api/salesPolicies/delete/general
+DELETE https://192.168.31.250:5192/api/salesPolicies/delete/personal/:email
+
+
+
+Reservations
+POST https://192.168.31.250:5192/api/reservations/create
+PUT https://192.168.31.250:5192/api/reservations/skip/:reservationID
+GET https://192.168.31.250:5192/api/reservations/user
+GET https://192.168.31.250:5192/api/reservations/parking
+
+
+
+PaymentProcess
+POST https://192.168.31.250:5192/api/payments/paypal/create
+POST https://192.168.31.250:5192/api/payments/paypal/confirm
+POST https://192.168.31.250:5192/api/payments/liqpay/create
+POST https://192.168.31.250:5192/api/payments/liqpay/confirm
+POST https://192.168.31.250:5192/api/payments/balance
+
+
+
+ParkPlace
+POST https://192.168.31.250:5192/api/parkPlaces/create
+PUT https://192.168.31.250:5192/api/parkPlaces/update/:ParkPlaceID
+DELETE https://192.168.31.250:5192/api/parkPlaces/delete/:ParkPlaceID
+GET https://192.168.31.250:5192/api/parkPlaces/getInfo/:ParkPlaceID
+
+
+
+Parking
+POST https://192.168.31.250:5192/api/parkings/create
+PUT https://192.168.31.250:5192/api/parkings/update
+DELETE https://192.168.31.250:5192/api/parkings/delete/:parkingID
+GET https://192.168.31.250:5192/api/parkings/getStatistics
+
+
+
+ParkingAction
+POST https://192.168.31.250:5192/api/parkingActions/user/start
+POST https://192.168.31.250:5192/api/parkingActions/IOT/start
+POST https://192.168.31.250:5192/api/parkingActions/user/stop
+POST https://192.168.31.250:5192/api/parkingActions/IOT/stop
+
+
+
+OpenAI
+POST https://192.168.31.250:5192/api/openAI/analyze
+
+
+
+FavouriteParking
+POST https://192.168.31.250:5192/api/favoriteParkings/add
+DELETE https://192.168.31.250:5192/api/favoriteParkings/delete
+GET https://192.168.31.250:5192/api/favoriteParkings/favouriteParkings/user
+
+
+
+DepositProcess
+POST https://192.168.31.250:5192/api/deposits/paypal/create
+POST https://192.168.31.250:5192/api/deposits/paypal/confirm
+POST https://192.168.31.250:5192/api/deposits/liqpay/create
+POST https://192.168.31.250:5192/api/deposits/liqpay/confirm
+
+
+
+CancellationPolicies
+POST https://192.168.31.250:5192/api/cancellationPolicies/create
+PUT https://192.168.31.250:5192/api/cancellationPolicies/update
+DELETE https://192.168.31.250:5192/api/cancellationPolicies/delete
+
+
+
+BonusesCost
+POST https://192.168.31.250:5192/api/bonusesCosts/create
+PUT https://192.168.31.250:5192/api/bonusesCosts/update/:BonusesCostID
+DELETE https://192.168.31.250:5192/api/bonusesCosts/delete/:BonusesCostID
+GET https://192.168.31.250:5192/api/bonusesCosts/currency/:currency
+
+
+
