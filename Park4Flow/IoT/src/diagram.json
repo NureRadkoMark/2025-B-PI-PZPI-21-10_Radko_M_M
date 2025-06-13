@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "author": "Марк Радько",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 288, "left": -119.96, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": 150, "left": -149.8, "attrs": { "color": "red" } },
+    { "type": "wokwi-membrane-keypad", "id": "keypad1", "top": 46, "left": -426.4, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo1", "top": 74.8, "left": -86.4, "attrs": {} },
+    { "type": "wokwi-resistor", "id": "r1", "top": 253.55, "left": -67.2, "attrs": { "value": "220" } },
+    { "type": "wokwi-led", "id": "led2", "top": 178.8, "left": -34.6, "attrs": { "color": "green" } },
+    { "type": "wokwi-resistor", "id": "r2", "top": 253.55, "left": 19.2, "attrs": { "value": "220" } }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "blue", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "blue", [] ],
+    [ "esp:5V", "servo1:V+", "red", [ "h0" ] ],
+    [ "esp:23", "keypad1:R1", "yellow", [ "h0" ] ],
+    [ "esp:22", "keypad1:R2", "yellow", [ "h0" ] ],
+    [ "esp:21", "keypad1:R3", "yellow", [ "h0" ] ],
+    [ "esp:19", "keypad1:R4", "yellow", [ "h0" ] ],
+    [ "esp:17", "keypad1:C2", "yellow", [ "h0" ] ],
+    [ "esp:16", "keypad1:C3", "yellow", [ "h0" ] ],
+    [ "led1:C", "esp:GND.1", "black", [ "v0" ] ],
+    [ "led1:A", "r1:1", "yellow", [ "v0" ] ],
+    [ "esp:2", "r1:2", "yellow", [ "h0" ] ],
+    [ "led2:A", "r2:1", "yellow", [ "v0" ] ],
+    [ "led2:C", "esp:GND.1", "black", [ "v0" ] ],
+    [ "r2:2", "esp:13", "yellow", [ "v0" ] ],
+    [ "esp:5", "servo1:PWM", "yellow", [ "h-38.4", "v-192" ] ],
+    [ "keypad1:C1", "esp:18", "yellow", [ "v0" ] ],
+    [ "esp:15", "keypad1:C4", "yellow", [ "v0" ] ],
+    [ "servo1:GND", "esp:GND.2", "black", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
