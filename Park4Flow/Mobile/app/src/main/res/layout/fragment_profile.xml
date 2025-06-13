@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:padding="24dp"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="80dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:id="@+id/profileTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_dark" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <ImageButton
+                android:id="@+id/settingsButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/baseline_menu_24"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:tint="@color/text_dark"
+                android:contentDescription="Settings"/>
+        </LinearLayout>
+
+        <!-- User Email -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Park4Flow.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:startIconDrawable="@drawable/baseline_local_post_office_24"
+            app:startIconTint="@color/primary_green"
+            android:enabled="false"
+            app:boxBackgroundMode="outline">
+
+            <TextView
+                android:id="@+id/userEmail"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:textSize="16sp"
+                android:textColor="@color/text_dark"
+                android:gravity="center_vertical"
+                android:paddingStart="12dp"
+                tools:text="user@example.com"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- First Name -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Park4Flow.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="First Name"
+            app:tint="@color/primary_green"
+            app:startIconDrawable="@drawable/ic_menu_profile">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/userFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/text_dark"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Second Name -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Park4Flow.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="Second Name"
+            app:tint="@color/primary_green"
+            app:startIconDrawable="@drawable/ic_menu_profile">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/userSecondName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/text_dark"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Phone -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Park4Flow.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="Phone Number"
+            app:tint="@color/primary_green"
+            app:startIconDrawable="@drawable/baseline_contact_phone_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/userPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/text_dark"
+                android:inputType="phone"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Balance -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/userBalance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_dark"
+                tools:text="Balance: $100.00"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/addFundsButton"
+                style="@style/Widget.Park4Flow.Button.Primary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Top Up"/>
+        </LinearLayout>
+
+        <!-- Bonuses -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/userBonuses"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_dark"
+                tools:text="Bonuses: 150"/>
+
+            <ImageView
+                android:id="@+id/bonusIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/bonus_icon"
+                />
+        </LinearLayout>
+
+        <!-- Vehicles Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Vehicles"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_dark"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Vehicles List -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/vehiclesRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Add Vehicle Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/addVehicleButton"
+            style="@style/Widget.Park4Flow.Button.Secondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Add Vehicle"/>
+
+        <!-- Save Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/saveButton"
+            style="@style/Widget.Park4Flow.Button.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Save Changes"/>
+    </LinearLayout>
+</ScrollView>

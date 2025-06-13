@@ -1,0 +1,23 @@
+<resources>
+    <string name="title_home">Home</string>
+    <string name="title_favorites">Favorites</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="favorite">favorite</string>
+    <string name="parking_image">parking image</string>
+    <string name="reserve">reserve</string>
+    <string name="park">park</string>
+    <string name="navigate">navigate</string>
+    <string name="app_name">P4F</string>
+    <string-array name="languages_array">
+        <item>en</item>
+        <item>ua</item>
+        <item>de</item>
+    </string-array>
+
+    <string-array name="currencies_array">
+        <item>USD</item>
+        <item>EUR</item>
+        <item>UAH</item>
+    </string-array>
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.bachelor_project_parking_system.ui.HomeFragment"
+        tools:layout="@layout/fragment_home">
+
+        <argument
+            android:name="lat"
+            app:argType="string"
+            android:defaultValue="0.0" />
+
+        <argument
+            android:name="lng"
+            app:argType="string"
+            android:defaultValue="0.0" />
+    </fragment>
+
+    <!-- Favorites -->
+    <fragment
+        android:id="@+id/navigation_favorites"
+        android:name="com.example.bachelor_project_parking_system.ui.FavouritesFragment"
+        tools:layout="@layout/fragment_favourites">
+    </fragment>
+
+    <!-- Profile -->
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.bachelor_project_parking_system.ui.ProfileFragment"
+        tools:layout="@layout/fragment_profile" />
+
+
+    <fragment
+        android:id="@+id/navigation_reservations"
+        android:name="com.example.bachelor_project_parking_system.ui.ReservationsFragment"
+        tools:layout="@layout/fragment_reservations" />
+
+</navigation>

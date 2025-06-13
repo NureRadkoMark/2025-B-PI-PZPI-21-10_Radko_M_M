@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorOnPrimary"
+    android:fillViewport="true"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Верхний блок: картинка + текст -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layout_marginBottom="16dp">
+
+            <!-- Картинка слева -->
+            <ImageView
+                android:id="@+id/parkingImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder"
+                android:contentDescription="Parking Image"
+                android:layout_marginEnd="16dp" />
+
+            <!-- Текст справа -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/parkingTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Parking Title"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/favoriteStar"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_menu_favorites"
+                        android:contentDescription="Add to favorites" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/parkingInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Parking details..."
+                    android:layout_marginTop="4dp"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/dynamicPricing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dynamic pricing: Yes"
+                    android:layout_marginTop="2dp"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/parkingAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Address: "
+                    android:layout_marginTop="2dp"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/parkingStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Status: "
+                    android:layout_marginTop="2dp"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/demandFactor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Demand factor:"
+                    android:layout_marginTop="2dp"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Блок кнопок -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:weightSum="3">
+
+            <Button
+                android:id="@+id/reservationButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/baseline_edit_note_24"
+                android:text="Reservation" />
+
+            <Button
+                android:id="@+id/parkButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:drawableLeft="@drawable/baseline_directions_car_24"
+                android:text="Park" />
+
+            <Button
+                android:id="@+id/navigateButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:drawableLeft="@drawable/baseline_navigation_24"
+                android:text="Navigate"
+                android:backgroundTint="@color/colorSecondary" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

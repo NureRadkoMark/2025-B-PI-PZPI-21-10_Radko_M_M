@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.MaterialToolbar android:id="@+id/customToolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="?attr/colorPrimary"
+    android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+    app:titleTextColor="@android:color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- кнопка уведомлений -->
+    <ImageView
+        android:id="@+id/notificationsIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:src="@drawable/baseline_notifications_active_24"
+        android:contentDescription="Notifications"
+        android:padding="8dp"
+        android:layout_marginEnd="8dp" />
+</com.google.android.material.appbar.MaterialToolbar>

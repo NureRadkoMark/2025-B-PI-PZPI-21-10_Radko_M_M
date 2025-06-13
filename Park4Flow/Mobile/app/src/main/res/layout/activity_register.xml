@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/park4flow_light"
+    android:padding="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/registerTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Account"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorOnSurface"
+            android:layout_marginTop="100dp"
+            />
+
+        <EditText
+            android:id="@+id/firstNameInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/registerTitle"
+            android:layout_marginTop="24dp"
+            android:hint="First Name"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:padding="12dp"
+            android:background="@drawable/edittext_background"
+            android:textColor="@android:color/black"
+            android:drawablePadding="8dp"
+            android:drawableStart="@drawable/ic_menu_profile" />
+
+        <EditText
+            android:id="@+id/secondNameInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/firstNameInput"
+            android:layout_marginTop="12dp"
+            android:hint="Second Name"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:padding="12dp"
+            android:background="@drawable/edittext_background"
+            android:textColor="@android:color/black"
+            android:drawablePadding="8dp"
+            android:drawableStart="@drawable/ic_menu_profile" />
+
+        <EditText
+            android:id="@+id/emailInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/secondNameInput"
+            android:layout_marginTop="12dp"
+            android:hint="Email"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:padding="12dp"
+            android:background="@drawable/edittext_background"
+            android:textColor="@android:color/black"
+            android:inputType="textEmailAddress"
+            android:drawablePadding="8dp"
+            android:drawableStart="@drawable/baseline_alternate_email_24" />
+
+        <EditText
+            android:id="@+id/phoneInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emailInput"
+            android:layout_marginTop="12dp"
+            android:hint="Phone Number"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:padding="12dp"
+            android:background="@drawable/edittext_background"
+            android:textColor="@android:color/black"
+            android:inputType="phone"
+            android:drawablePadding="8dp"
+            android:drawableStart="@drawable/baseline_contact_phone_24" />
+
+        <EditText
+            android:id="@+id/passwordInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/phoneInput"
+            android:layout_marginTop="12dp"
+            android:hint="Password"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:padding="12dp"
+            android:background="@drawable/edittext_background"
+            android:textColor="@android:color/black"
+            android:inputType="textPassword"
+            android:drawableStart="@drawable/pass_icon"
+            android:drawablePadding="8dp"
+            android:drawableEnd="@drawable/baseline_eye" />
+
+        <TextView
+            android:id="@+id/selectLanguageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/passwordInput"
+            android:text="Language"
+            android:layout_marginTop="12dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/colorOnSurface"
+            />
+
+        <Spinner
+            android:id="@+id/languageSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/passwordInput"
+            android:text="language"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/selectLanguageText"
+            android:layout_marginLeft="7dp"/>
+
+        <TextView
+            android:id="@+id/selectCurrencyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/selectLanguageText"
+            android:text="Currency"
+            android:layout_marginTop="12dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/colorOnSurface"
+            />
+
+        <Spinner
+            android:id="@+id/currencySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/languageSpinner"
+            android:text="currency"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/selectCurrencyText"
+            android:layout_marginLeft="12dp"/>
+
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/currencySpinner"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="@null"
+            android:text="REGISTER"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/alreadyAccountText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account?"
+            android:textSize="16sp"
+            android:layout_below="@id/registerButton"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/colorOnSurface" />
+
+        <TextView
+            android:id="@+id/loginLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/registerButton"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="230dp"
+            android:text="Login"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/colorSecondaryVariant"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground" />
+    </RelativeLayout>
+</ScrollView>

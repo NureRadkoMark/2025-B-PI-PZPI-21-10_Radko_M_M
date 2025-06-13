@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_item"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    >
+
+    <ImageView
+        android:id="@+id/parkingImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/placeholder"
+        android:contentDescription="Parking Image"
+        android:layout_marginEnd="12dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/parkingTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Parking Name"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/parkingInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Some info"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/dynamicPricing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Active: Yes"
+            android:textSize="13sp"
+            android:layout_marginTop="2dp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/deleteButton"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/baseline_delete_24"
+        android:contentDescription="Delete"
+        app:tint="@android:color/holo_red_dark"
+        android:layout_gravity="top" />
+</LinearLayout>

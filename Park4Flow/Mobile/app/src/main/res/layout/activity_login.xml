@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/park4flow_light"
+    >
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:text="Welcome!"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorOnSurface"
+        android:layout_alignParentTop="true" />
+
+    <EditText
+        android:id="@+id/usernameInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcomeText"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/edittext_background"
+        android:drawableStart="@drawable/ic_menu_profile"
+        android:drawablePadding="8dp"
+        android:hint="Username"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:padding="12dp"
+        android:textColor="@android:color/black" />
+
+    <EditText
+        android:id="@+id/passwordInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:drawablePadding="8dp"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:layout_below="@id/usernameInput"
+        android:padding="12dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edittext_background"
+        android:textColor="@android:color/black"
+        android:inputType="textPassword"
+        android:drawableStart="@drawable/pass_icon"
+        android:drawableEnd="@drawable/baseline_eye"/>
+
+    <CheckBox
+        android:id="@+id/rememberMeCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remember me"
+        android:textSize="16sp"
+        android:layout_below="@id/passwordInput"
+        android:textColor="@color/colorOnSurface" />
+
+    <TextView
+        android:id="@+id/forgotPasswordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordInput"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="13dp"
+        android:text="Forgot Password?"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/colorSecondaryVariant"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/forgotPasswordText"
+        android:layout_marginTop="29dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@null"
+        android:text="LOGIN"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/signUpText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't have an account?"
+        android:textSize="16sp"
+        android:layout_below="@id/loginButton"
+        android:textColor="@color/colorOnSurface"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/forgotPasswordLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loginButton"
+        android:layout_marginTop="16dp"
+        android:text="Sign up"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginStart="230dp"
+        android:textColor="@color/colorSecondaryVariant"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        />
+
+</RelativeLayout>

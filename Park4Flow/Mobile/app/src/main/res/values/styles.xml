@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ItemVehicleStyle">
+        <item name="android:background">@drawable/item_background</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+    <style name="CodeDigitStyle">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:background">@drawable/edittext_background</item>
+        <item name="android:gravity">center</item>
+        <item name="android:inputType">number</item>
+        <item name="android:maxLength">1</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+    <!-- CardView style -->
+    <style name="Park4FlowCard" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">?attr/cardBackgroundColor</item>
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">4dp</item>
+        <item name="cardUseCompatPadding">true</item>
+    </style>
+
+    <!-- Text styles -->
+    <style name="TextAppearance.Park4Flow.Title" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="TextAppearance.Park4Flow.Subtitle" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+
+    <!-- Icon style -->
+    <style name="Park4FlowIcon">
+        <item name="android:tint">?attr/iconTint</item>
+        <item name="android:width">24dp</item>
+        <item name="android:height">24dp</item>
+    </style>
+    <!-- Button Styles -->
+    <style name="Widget.Park4Flow.Button.Primary" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/primary_green</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:paddingVertical">12dp</item>
+        <item name="android:paddingHorizontal">24dp</item>
+    </style>
+
+    <style name="Widget.Park4Flow.Button.Secondary" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeColor">@color/primary_green</item>
+        <item name="android:textColor">@color/primary_green</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:paddingVertical">12dp</item>
+        <item name="android:paddingHorizontal">24dp</item>
+    </style>
+
+    <!-- Text Input Styles -->
+    <style name="Widget.Park4Flow.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/light_green</item>
+        <item name="hintTextColor">@color/text_light</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
+    </style>
+</resources>
